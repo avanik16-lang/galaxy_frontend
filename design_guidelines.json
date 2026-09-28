@@ -1,0 +1,270 @@
+{
+  "project_name": "GalaxyCare / One UI Support",
+  "archetype": "THE PERFORMANCE PRO & TECH-GREEKY DIAGNOSTIC ENGINE",
+  "version": "1.0.0",
+  "theme_support": {
+    "mode": "dual_toggle",
+    "default_mode": "dark",
+    "toggle_position": "top-right nav bar",
+    "light_theme": {
+      "bg_primary": "#F8FAFC",
+      "bg_surface": "#FFFFFF",
+      "bg_surface_elevated": "#F1F5F9",
+      "border_subtle": "#E2E8F0",
+      "text_primary": "#0F172A",
+      "text_secondary": "#475569",
+      "text_muted": "#64748B",
+      "brand_blue": "#1428A0",
+      "brand_blue_accent": "#2B57F0"
+    },
+    "dark_theme": {
+      "bg_primary": "#070A10",
+      "bg_surface": "#0F1420",
+      "bg_surface_elevated": "#172033",
+      "border_subtle": "#1E293B",
+      "text_primary": "#F8FAFC",
+      "text_secondary": "#94A3B8",
+      "text_muted": "#64748B",
+      "brand_blue": "#3B82F6",
+      "brand_blue_accent": "#60A5FA"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "headings": "'Outfit', 'Cabinet Grotesk', -apple-system, sans-serif",
+      "monospace_tech_labels": "'JetBrains Mono', 'Fira Code', 'Space Mono', monospace",
+      "body": "'Inter', 'Public Sans', sans-serif"
+    },
+    "scale": {
+      "eyebrow_mono": "text-xs tracking-[0.2em] font-mono uppercase text-blue-500 dark:text-blue-400 font-semibold",
+      "hero_title": "text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight",
+      "section_number_label": "text-xs sm:text-sm font-mono tracking-widest uppercase text-blue-600 dark:text-blue-400 font-bold",
+      "section_heading": "text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-slate-900 dark:text-white",
+      "card_title": "text-lg font-semibold text-slate-900 dark:text-slate-100",
+      "body": "text-sm sm:text-base leading-relaxed text-slate-600 dark:text-slate-300",
+      "mono_data": "text-xs font-mono tracking-wide text-slate-500 dark:text-slate-400"
+    }
+  },
+  "colors": {
+    "brand": {
+      "samsung_blue": "#1428A0",
+      "electric_blue": "#2B57F0",
+      "cyan_glow": "#00F0FF",
+      "blue_gradient": "bg-gradient-to-r from-[#1428A0] via-[#2B57F0] to-[#00F0FF]"
+    },
+    "risk_tags": {
+      "LOW": {
+        "bg_light": "bg-emerald-500/10",
+        "border_light": "border-emerald-500/30",
+        "text_light": "text-emerald-700",
+        "bg_dark": "bg-emerald-500/15",
+        "border_dark": "border-emerald-500/40",
+        "text_dark": "text-emerald-400",
+        "label": "LOW RISK"
+      },
+      "MEDIUM": {
+        "bg_light": "bg-amber-500/10",
+        "border_light": "border-amber-500/30",
+        "text_light": "text-amber-800",
+        "bg_dark": "bg-amber-500/15",
+        "border_dark": "border-amber-500/40",
+        "text_dark": "text-amber-400",
+        "label": "MEDIUM RISK"
+      },
+      "HIGH": {
+        "bg_light": "bg-rose-500/10",
+        "border_light": "border-rose-500/30",
+        "text_light": "text-rose-700",
+        "bg_dark": "bg-rose-500/15",
+        "border_dark": "border-rose-500/40",
+        "text_dark": "text-rose-400",
+        "label": "HIGH RISK"
+      }
+    },
+    "status_indicators": {
+      "understanding": {
+        "label": "Understanding your issue…",
+        "color": "amber",
+        "animate": "spin"
+      },
+      "low_confidence": {
+        "label": "Low confidence – need clarification",
+        "color": "orange",
+        "animate": "pulse"
+      },
+      "plan_ready": {
+        "label": "Plan ready",
+        "color": "emerald",
+        "animate": "ping-once"
+      },
+      "served_from_cache": {
+        "label": "Served from cache",
+        "color": "cyan",
+        "animate": "none"
+      }
+    }
+  },
+  "visual_enhancers": {
+    "greeky_elements": [
+      "Monospace uppercase section tags: '01 / TELL US WHAT'S WRONG', '02 / YOUR CARE PLAN', '03 / CARE HISTORY'",
+      "Shield eyebrow badge: 'SHIELD // GUIDED DEVICE CARE'",
+      "Live pulsing green dot indicator: 'Diagnostics ready' / 'System online'",
+      "Fine tactical grid background with sub-grid line crosshairs on section corners",
+      "Terminal-style code output block for raw diagnostic log / system parameters",
+      "Hardware specs pill tags (RAM, One UI Build, Security Patch, CPU status)"
+    ],
+    "glassmorphism": "backdrop-blur-xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800/80 shadow-lg",
+    "card_style": "rounded-2xl border border-slate-200 dark:border-slate-800/80 bg-white dark:bg-[#0F1420] p-6 shadow-sm transition-all hover:border-blue-500/30 dark:hover:border-blue-500/40"
+  },
+  "key_components_layout": {
+    "header": {
+      "title": "GalaxyCare",
+      "badge": "One UI Support v6.1",
+      "actions": [
+        "Live status dot: 'Diagnostics ready'",
+        "History drawer trigger pill with count badge",
+        "Light / Dark mode toggle switch"
+      ]
+    },
+    "section_01_tell_us_whats_wrong": {
+      "section_tag": "01 / TELL US WHAT'S WRONG",
+      "headline": "Let's get your Galaxy back.",
+      "headline_accent": "Galaxy back.",
+      "symptom_textarea": {
+        "label": "Describe your phone issue or symptoms in detail",
+        "placeholder": "e.g., Battery draining rapidly after One UI 6.1 update, screen flickering on 120Hz mode, or Wi-Fi keeps disconnecting during video calls...",
+        "rows": 5,
+        "is_prominent": true,
+        "required": true
+      },
+      "selectors_grid": {
+        "device_model": {
+          "label": "Device Model *",
+          "placeholder": "Select Galaxy Model...",
+          "required": true,
+          "options": [
+            "Samsung Galaxy S24 Ultra",
+            "Samsung Galaxy S24+",
+            "Samsung Galaxy S24",
+            "Samsung Galaxy S23 Ultra",
+            "Samsung Galaxy S23+",
+            "Samsung Galaxy S23 FE",
+            "Samsung Galaxy Z Fold 5",
+            "Samsung Galaxy Z Flip 5",
+            "Samsung Galaxy A55 5G",
+            "Samsung Galaxy A35 5G",
+            "Samsung Galaxy Tab S9 Ultra"
+          ]
+        },
+        "one_ui_version": {
+          "label": "One UI Version *",
+          "placeholder": "Select One UI Version...",
+          "required": true,
+          "options": [
+            "One UI 6.1.1 (Android 14)",
+            "One UI 6.1 (Android 14)",
+            "One UI 6.0 (Android 14)",
+            "One UI 5.1 (Android 13)",
+            "One UI 5.0 (Android 13)"
+          ]
+        }
+      },
+      "analyze_button": {
+        "label": "Get Care Plan",
+        "sublabel": "Analyze with Galaxy Diagnostic Engine",
+        "icon": "Sparkles / Cpu / Zap",
+        "loading_state_text": "Understanding your issue…"
+      }
+    },
+    "clarification_module": {
+      "trigger": "When backend returns needs_clarification=true",
+      "style": "Highlight box with pulsating amber border & question badge",
+      "components": [
+        "Status badge: 'Low confidence – need clarification'",
+        "Clarification question text",
+        "Quick answer option pills / buttons",
+        "Custom response input with Submit clarification button"
+      ]
+    },
+    "section_02_your_care_plan": {
+      "section_tag": "02 / YOUR CARE PLAN",
+      "diagnosis_summary_card": {
+        "title": "Diagnostic Assessment",
+        "status_badge": "Status indicator pill (Plan ready / Served from cache)",
+        "progress_counter": "Fix Progress: X of Y fixes completed",
+        "progress_bar": "Custom animated green/blue progress bar"
+      },
+      "care_steps_list": {
+        "step_card_structure": [
+          "Step number badge (e.g. 'STEP 01')",
+          "Title and detailed instructions",
+          "Risk Tag (LOW / MEDIUM / HIGH badge)",
+          "can_fix flag check -> If true and LOW risk -> 'Fix for me' button",
+          "'Fix for me' button states: Idle -> Fixing... -> Fixed (Success checkmark)",
+          "Manual step completion toggle checkbox"
+        ]
+      }
+    },
+    "care_history_sidebar_or_modal": {
+      "title": "Care History & Saved Diagnostics",
+      "features": [
+        "List of past care plans with timestamp, device model, symptom summary",
+        "Quick load past plan onto Section 02",
+        "Clear history option",
+        "Filter by device model or date"
+      ]
+    }
+  },
+  "media": {
+    "image_urls": [
+      {
+        "url": "https://images.unsplash.com/photo-1709744722656-9b850470293f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwyfHxzYW1zdW5nJTIwZ2FsYXh5JTIwcGhvbmUlMjB0ZWNoJTIwcmVwYWlyJTIwZGlhZ25vc3RpY3xlbnwwfHx8fDE3OTA2MTkxODF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Samsung Galaxy S Ultra devices close up on tech workbench",
+        "usage": "Hero background subtle overlay / Diagnostic showcase banner"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1653548147626-d3ca2bd24cb6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHw0fHxzYW1zdW5nJTIwZ2FsYXh5JTIwcGhvbmUlMjB0ZWNoJTIwcmVwYWlyJTIwZGlhZ25vc3RpY3xlbnwwfHx8fDE3OTA2MTkxODF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Exploded phone hardware components diagram",
+        "usage": "Empty state illustration or Care History header asset"
+      }
+    ]
+  },
+  "testing_and_attributes": {
+    "rule": "ALL interactive and key informational elements MUST include a data-testid attribute formatted in kebab-case",
+    "required_test_ids": [
+      "theme-toggle-button",
+      "status-indicator-badge",
+      "diagnostics-ready-dot",
+      "care-history-button",
+      "care-history-drawer",
+      "symptom-textarea",
+      "device-model-select",
+      "oneui-version-select",
+      "get-care-plan-button",
+      "clarification-question-box",
+      "clarification-quick-answer-btn",
+      "clarification-submit-btn",
+      "care-plan-section",
+      "diagnosis-text-card",
+      "progress-counter-badge",
+      "care-step-item-1",
+      "risk-tag-badge",
+      "fix-for-me-button-1",
+      "care-history-item"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Ensure all JS components (App.js, etc.) use proper React Hooks and handle API loading states gracefully.",
+    "Mock backend API responses for local testing if external backend is not available, but support real REST API calls (POST /diagnose, POST /fix).",
+    "Strictly enforce required fields (Symptom, Device Model, One UI version) with clear inline validation before submitting POST /diagnose.",
+    "Implement light and dark theme using Tailwind CSS classes ('dark' class on HTML or container) with instant toggle state persistence.",
+    "Apply 'data-testid' to every interactive button, input, select, badge, and step card.",
+    "Maintain the Samsung GalaxyCare techy & greeky visual hierarchy: prominent dark/light card backgrounds, monospace uppercase labels ('01 / TELL US WHAT'S WRONG'), glowing accent borders, and status indicators."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": {
+    "anti_ai_slop": "Do not make a generic centered SaaS template. Use monospace technical eyebrows, structured grid borders, status badges, and Samsung Galaxy signature cobalt/electric blue tones.",
+    "spacing": "Generous spacing scale (p-6 to p-8 inside cards, gap-6 between grid items).",
+    "animations": "Use Framer Motion or smooth Tailwind transitions for step expansion, progress bar fills, and button loading spinners.",
+    "accessibility": "High contrast text for both light and dark modes. Meet APCA / WCAG standards on all risk tag badges and status pills."
+  }
+}
