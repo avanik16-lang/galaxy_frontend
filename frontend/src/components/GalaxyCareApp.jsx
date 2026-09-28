@@ -9,6 +9,7 @@ import {
   applyFix,
   getHistory,
   saveHistory,
+  clearHistory as clearHistoryApi,
   isBackendConfigured,
 } from "@/services/api";
 
@@ -153,6 +154,7 @@ export default function GalaxyCareApp() {
 
   const clearHistory = () => {
     setHistory([]);
+    if (backendOnline) clearHistoryApi().catch(() => {});
     toast.success("Care history cleared");
   };
 

@@ -1,4 +1,5 @@
-import { Activity, Bookmark } from "lucide-react";
+import { Activity, Bookmark, Copy } from "lucide-react";
+import { toast } from "sonner";
 import { StatusIndicator } from "./StatusIndicator";
 import { ClarificationBox } from "./ClarificationBox";
 import { CareStep } from "./CareStep";
@@ -32,6 +33,26 @@ export const CarePlan = ({
     : 0;
   const pct = total ? Math.round((completed / total) * 100) : 0;
 
+  const copyPlan = async () => {
+    if (!hasSteps) return;
+    const text = [
+      `GalaxyCare — Care Plan`,
+      ``,
+      `Diagnosis: ${plan.diagnosis}`,
+      ``,
+      ...plan.steps.map(
+        (s, i) =>
+          `${String(i + 1).padStart(2, "0")}. [${s.risk}] ${s.title}\n    ${s.description}`,
+      ),
+    ].join("\n");
+    try {
+      await navigator.clipboard.writeText(text);
+      toast.success("Care plan copied to clipboard");
+    } catch {
+      toast.error("Couldn't copy to clipboard");
+    }
+  };
+
   return (
     <section data-testid="care-plan-section" className="relative">
       <div className="flex items-center justify-between">
@@ -64,11 +85,20 @@ export const CarePlan = ({
                 <p className="mono-label text-[10px] text-muted-foreground">
                   Diagnostic assessment
                 </p>
-                {savedToHistory && (
-                  <span className="flex items-center gap-1.5 mono-label text-[9px] text-emerald-600 dark:text-emerald-400">
-                    <Bookmark className="h-3 w-3" /> Saved to history
-                  </span>
-                )}
+                <div className="flex items-center gap-3">
+                  {savedToHistory && (
+                    <span className="flex items-center gap-1.5 mono-label text-[9px] text-emerald-600 dark:text-emerald-400">
+                      <Bookmark className="h-3 w-3" /> Saved to history
+                    </span>
+                  )}
+                  <button
+                    data-testid="copy-diagnostics-button"
+                    onClick={copyPlan}
+                    className="flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1 mono-label text-[9px] text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                  >
+                    <Copy className="h-3 w-3" /> Copy
+                  </button>
+                </div>
               </div>
               <p className="mt-3 font-display text-2xl font-bold leading-snug tracking-tight text-foreground sm:text-3xl">
                 {plan.diagnosis}

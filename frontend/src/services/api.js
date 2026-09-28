@@ -111,3 +111,8 @@ export function getHistory() {
 export function saveHistory(plan) {
   return request("POST", "/history", plan);
 }
+
+/** DELETE /history — clear all saved care plans. */
+export function clearHistory() {
+  return request("DELETE", "/history");
+}
